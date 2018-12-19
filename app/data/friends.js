@@ -1,21 +1,21 @@
-var friends = [
-    {
-        name: "Phillip",
-        photo: "https://psychology.missouri.edu/sites/default/files/styles/thumb_300/public/people-img/wood_phillip_resized.jpg?itok=QERMHh2D",
-        scores: [
-            3, 
-            2, 
-            5, 
-            1, 
-            4, 
-            3, 
-            5, 
-            5, 
-            1, 
-            2
-        ]
-    }
-];
+// var friends = [
+//     {
+//         name: "Phillip",
+//         photo: "https://psychology.missouri.edu/sites/default/files/styles/thumb_300/public/people-img/wood_phillip_resized.jpg?itok=QERMHh2D",
+//         scores: [
+//             3, 
+//             2, 
+//             5, 
+//             1, 
+//             4, 
+//             3, 
+//             5, 
+//             5, 
+//             1, 
+//             2
+//         ]
+//     }
+// ];
 
 $(document).ready(function(){
    
