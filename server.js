@@ -1,4 +1,4 @@
-require('./app/routing/htmlRoutes.js');
+//require('./app/routing/htmlRoutes.js');
 var express = require("express");
 var path = require("path");
 
