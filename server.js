@@ -1,4 +1,3 @@
-require('./app/routing/htmlRoutes.js');
 var express = require("express");
 var path = require("path");
 
@@ -8,7 +7,7 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
+require('./app/routing/htmlRoutes.js')(app, path);
 
 // each user enters their name, photo and array of 10 scores. This gets put into a constructor function.
 
