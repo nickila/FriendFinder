@@ -1,4 +1,4 @@
-//require('./app/routing/htmlRoutes.js');
+require('./app/routing/htmlRoutes.js');
 var express = require("express");
 var path = require("path");
 
@@ -14,13 +14,13 @@ app.use(express.json());
 
 
 
-app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "app/public/home.html"));
-});
+// app.get("/", function (req, res) {
+//     res.sendFile(path.join(__dirname, "app/public/home.html"));
+// });
 
-app.get("/survey.html", function (req, res) {
-    res.sendFile(path.join(__dirname, "app/public/survey.html"));
-});
+// app.get("/survey.html", function (req, res) {
+//     res.sendFile(path.join(__dirname, "app/public/survey.html"));
+// });
 
 
 
