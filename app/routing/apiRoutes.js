@@ -53,7 +53,7 @@ module.exports = function (app, path) {
             sumArr.push(sum);
             diff = [];
         }
-        console.log("sumArr " + sumArr);
+        // console.log("sumArr " + sumArr);
         
         function indexOfSmallest(a) {
             var lowest = 0;

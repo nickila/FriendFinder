@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+    <!-- <link rel="stylesheet" href="/app/public/styles.css"> -->
     <title>Friend Finder Survey</title>
 </head>
 
@@ -215,8 +215,9 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                    <button id="close" type="button" class="btn btn-primary" data-dismiss="modal">Accept Friend for
+                        Life</button>
                 </div>
             </div>
         </div>
@@ -226,7 +227,7 @@
     <script src="server.js"></script>
      -->
     <script type="text/javascript">
-        
+
         // myModule = require("../data/friends");
         // var friends = myModule.friends;
         // var jquery = require("jquery");
@@ -253,33 +254,27 @@
                 newFriend.score.push(parseInt($("#Q10").val()));
                 console.log(newFriend);
                 //   $(".question") => [{},{},{}]
-
-                // $("#friendName").text(matchName);
-                // $("#friendImg").html("<img src=" + matchImg + "></img>")
-
+                $("#name").val("");
+                $("#photoImage").val("")
+                $("#Q1").val("");
+                $("#Q2").val("");
+                $("#Q3").val("");
+                $("#Q4").val("");
+                $("#Q5").val("");
+                $("#Q6").val("");
+                $("#Q7").val("");
+                $("#Q8").val("");
+                $("#Q9").val("");
+                $("#Q10").val("");
                 // 3. Check the two scores against each other. 
                 // 4. Run a loop to check the difference of those two variables.
                 // 5. Ultimately we want to run through the scores of user 1 and check it against new user, then user 2, user 3, etc. Save each difference in a new array. Then we can check which number is the smallest but running a loop of that array to see if any are 0, 1, 2, etc. Whichever is the first to hit true, find that index spot and return the corresponding index spot of users (friends).
                 $.post("/api/friends", newFriend,
                     function (data) {
                         $("#friendName").text(data.name);
-                        $("#friendImg").html("<img src=" + data.img + "></img>")
-                        $("#Q1").val("");
-                        $("#Q2").val("");
-                        $("#Q3").val("");
-                        $("#Q4").val("");
-                        $("#Q5").val("");
-                        $("#Q6").val("");
-                        $("#Q7").val("");
-                        $("#Q8").val("");
-                        $("#Q9").val("");
-                        $("#Q10").val("");
-
+                        $("#friendImg").html("<img style='width: 465px' src=" + data.img + "></img>")
                     });
-
-
             });
-
         });
 
     </script>

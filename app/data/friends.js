@@ -48,6 +48,22 @@ var friends =
                 3,
                 3
             ]
+        },
+        {
+            name: "Alf",
+            img: "https://ih0.redbubble.net/image.422284817.3738/flat,550x550,075,f.u1.jpg",
+            score: [
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4
+            ]
         }
     ];
 module.exports = friends;
