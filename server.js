@@ -8,11 +8,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 require('./app/routing/htmlRoutes.js')(app, path);
-
-// each user enters their name, photo and array of 10 scores. This gets put into a constructor function.
-
-
-
 // app.get("/", function (req, res) {
 //     res.sendFile(path.join(__dirname, "app/public/home.html"));
 // });
