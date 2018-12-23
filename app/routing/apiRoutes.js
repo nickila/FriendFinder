@@ -49,10 +49,11 @@ module.exports = function (app, path) {
             }
             match.name = (friends[lowest].name);
             match.img = (friends[lowest].img);
+            //console.log(friends[lowest].img);
         }
         indexOfSmallest(sumArr);
         friends.push(newFriend);
-        console.log("ending " + newFriend.score[0])
+        
         res.json(match);
     });
 };
