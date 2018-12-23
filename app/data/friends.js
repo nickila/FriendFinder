@@ -1,4 +1,3 @@
-//   $(".question") => [{},{},{}]
 var friends =
     [
         {

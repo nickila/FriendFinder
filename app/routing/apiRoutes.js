@@ -28,9 +28,6 @@ module.exports = function (app, path) {
         }
         var diff = [];
         var sum;
-        
-        // 1. Push scores from friends[0].score into an array.
-        // 2. Find total difference of all scores from that array together and save sum as a variable.
         var sumArr = [];
         for (j = 0; j < friends.length; j++) {
             var friendsScoreArr = [];
@@ -53,32 +50,17 @@ module.exports = function (app, path) {
             sumArr.push(sum);
             diff = [];
         }
-        // console.log("sumArr " + sumArr);
-        
+
         function indexOfSmallest(a) {
             var lowest = 0;
             for (var i = 1; i < a.length; i++) {
-                if (a[i] < a[lowest]) lowest = i;
-                
+                if (a[i] < a[lowest]) lowest = i;     
             }
             match.name = (friends[lowest].name);
             match.img = (friends[lowest].img);
-            // matchName = friends[lowest].name;
-            // matchImg = friends[lowest].img;
         }
         indexOfSmallest(sumArr);
-        //friends.push(newFriend);
-        //console.log(friends);
-        
-        
-        
-        
-        
-        
         friends.push(newFriend);
-        
-        
-        // return
         res.json(match);
     });
 
