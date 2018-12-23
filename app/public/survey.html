@@ -259,7 +259,7 @@
                 newFriend.score.push(parseInt($("#Q8").val()));
                 newFriend.score.push(parseInt($("#Q9").val()));
                 newFriend.score.push(parseInt($("#Q10").val()));
-
+// console.log(newFriend.score)
                 $("#name").val("");
                 $("#photoImage").val("")
                 $("#Q1").val("");
@@ -277,6 +277,8 @@
                         $("#friendName").text(data.name);
                         $("#friendImg").html("<img style='width: 465px' src=" + data.img + "></img>")
                     });
+                    console.log("new friend " + newFriend);
+                    console.log("newest friend " + data)
             });
         });
 
